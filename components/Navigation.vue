@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full flex items-center justify-center gap-4">
+  <nav class="py-2 w-full flex items-center justify-center gap-4">
     <NuxtLink class="text-sm font-medium uppercase text-gray-600" to="/">Gallery</NuxtLink>
     <NuxtLink class="text-sm font-medium uppercase text-gray-600" to="/shop">Shop</NuxtLink>
     <NuxtLink class="text-sm font-medium uppercase text-gray-600" to="/about">About</NuxtLink>
