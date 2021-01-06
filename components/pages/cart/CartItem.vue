@@ -6,7 +6,7 @@
     <span>R{{item.price}}</span>
     </div>
     <button @click="removeFromCart()" class="flex">
-      <CrossIcon class="m-auto p-px bg-white rounded-full"/>
+      <CrossIcon class="m-auto p-px bg-white text-lightblue rounded-full"/>
     </button>
   </div>
 </template>

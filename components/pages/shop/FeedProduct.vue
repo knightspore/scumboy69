@@ -3,7 +3,7 @@
     <article class="p-5 grid gap-4 bg-lightblue text-white" v-if="product">
 
       <!-- Product Image -->
-      <NuxtLink :to="'shop/' + product.slug">
+      <NuxtLink :to="`/shop/${product.slug}`">
         <nuxt-image :placeholder="true" :src="productImage" :alt="product.title" class="w-full" />
       </NuxtLink>
 
