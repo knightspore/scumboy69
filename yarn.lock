@@ -2,6 +2,20 @@
 # yarn lockfile v1
 
 
+"@animxyz/core@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@animxyz/core/-/core-0.3.0.tgz#3f4a7c5e3e5bacb935820c155a8b7c7bfa0027af"
+  integrity sha512-U5rvWyfHMSTvLxYu/GFwJMFTeV0TifY4IvVGYH0oEb2Gcs+f+hS0hh5HIDCFu/yOdeJ5Y1IL1MCskUIq3xIdPg==
+
+"@animxyz/vue@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@animxyz/vue/-/vue-0.3.0.tgz#23a260190f392fec8dde79ef692c5c9653b50f35"
+  integrity sha512-+tGhKZairgORafsRzsAriUhIAtMW3RD4K7vo5ymFIsHKPLeX3yAJImZLcfKcQy7/7u/HHAHKPaHPiNHVNXU7pw==
+  dependencies:
+    "@animxyz/core" "^0.3.0"
+    clsx "^1.1.1"
+    vue-functional-data-merge "^3.1.0"
+
 "@babel/code-frame@^7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz#168da1a36e90da68ae8d49c0f1b48c7c6249213a"
@@ -2790,6 +2804,11 @@ clipboard@^2.0.0:
     good-listener "^1.2.2"
     select "^1.1.2"
     tiny-emitter "^2.0.0"
+
+clsx@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
+  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
 
 coa@^2.0.2:
   version "2.0.2"
@@ -8871,6 +8890,11 @@ vue-client-only@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
+
+vue-functional-data-merge@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/vue-functional-data-merge/-/vue-functional-data-merge-3.1.0.tgz#08a7797583b7f35680587f8a1d51d729aa1dc657"
+  integrity sha512-leT4kdJVQyeZNY1kmnS1xiUlQ9z1B/kdBFCILIjYYQDqZgLqCLa0UhjSSeRX6c3mUe6U5qYeM8LrEqkHJ1B4LA==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"

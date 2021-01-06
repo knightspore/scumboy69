@@ -1,10 +1,10 @@
 export default {
-  // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'SCUMBOY ART WEBSITE',
+    titleTemplate: '%s | Scumboy Online',
+
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -17,13 +17,11 @@ export default {
     ]
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
+  plugins: [
+    '~/plugins/animxyz.js'
   ],
 
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-  ],
+  loading: true,
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -34,12 +32,9 @@ export default {
   ],
 
   modules: [
-    // '@nuxtjs/axios',
-    // '@nuxt/content',
-    '@nuxtjs/svg'
+    '@nuxtjs/axios',
+    '@nuxt/content',
+    '@nuxtjs/svg',
   ],
-
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-  }
 }
+
