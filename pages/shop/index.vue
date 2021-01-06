@@ -5,8 +5,9 @@
       <HeadingH1>{{shopText.title}}</HeadingH1>
       <NuxtContent :document="shopText" />
     </SectionPadded>
+    <!-- Product List -->
     <SectionPadded>
-      <div class="py-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <FeedProduct v-for="product in products" :key="product.slug" :product="product" />
       </div>
     </SectionPadded>
