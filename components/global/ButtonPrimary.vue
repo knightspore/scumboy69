@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button v-html="text" class="px-4 py-3 text-sm font-black uppercase border-lightblue border-2 opacity-100 hover:opacity-75 transition-opacity duration-75" />
+    <button v-html="text" class="px-4 py-3 text-sm font-black uppercase border-lightblue border-4 opacity-100 hover:opacity-75 transition-opacity duration-75" />
   </div>
 </template>
 

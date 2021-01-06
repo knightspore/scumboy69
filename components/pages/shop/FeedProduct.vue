@@ -1,11 +1,11 @@
 <template>
   <div>
-    <article class="p-5 grid gap-4 bg-gray-900 text-white" v-if="product">
+    <article class="p-5 grid gap-4 bg-lightblue text-white" v-if="product">
 
       <!-- Product Image -->
-      <a :href="'/shop/' + product.slug">
-        <img :src="product.image" :alt="product.title" class="w-full">
-      </a>
+      <NuxtLink :to="'shop/' + product.slug">
+        <nuxt-image :placeholder="true" :src="productImage" :alt="product.title" class="w-full" />
+      </NuxtLink>
 
       <div class="flex justify-between">
         <!-- Name & Date -->
@@ -29,5 +29,10 @@ export default {
   props: [
     'product'
   ],
+  computed: {
+    productImage() {
+      return `/img/${this.product.image}`
+    }
+  },
 }
 </script>

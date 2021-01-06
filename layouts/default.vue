@@ -7,7 +7,7 @@
         <!-- Title -->
         <div class="pt-10 pb-8">
           <XyzTransition appear xyz="fade up duration-6">
-            <ScumboyLogo id="logo" class="w-full p-4 h-auto stroke-current hover:stroke-0 transition-color duration-300" />
+            <ScumboyLogo id="logo" class="w-full lg:w-1/2 p-4 mx-auto stroke-current hover:stroke-0 transition-color duration-300" />
           </XyzTransition>
         </div>
 

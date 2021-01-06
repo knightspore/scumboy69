@@ -32,9 +32,9 @@ export default {
   ],
 
   modules: [
-    '@nuxtjs/axios',
     '@nuxt/content',
     '@nuxtjs/svg',
+    '@nuxt/image',
   ],
 }
 
