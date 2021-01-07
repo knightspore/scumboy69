@@ -14,7 +14,7 @@
 
         <!-- Press -->
         <section>
-          <HeadingH2>{{pageContent.press}}</HeadingH2>
+          <HeadingH2>{{pageContent.subtitle}}</HeadingH2>
           <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
             <PressCard v-for="item in data" :pressItem="item" :key="item.id"/>
           </div>

@@ -1,6 +1,6 @@
 ---
 title: About Scumboy
-press: Scum in the Press
+subtitle: Scum in the Press
 ---
 
 ‘SCUM BOY. TRANS 3D Artist. Motion Graphic Designer’. These are the descriptors that are shared on Scum Boy’s Instagram profile. With a distinct style dominated by pastel colours, detached body parts and mannequin-like figures, Scum Boy plays with branding and pop culture references, while building a 3D queer world.  

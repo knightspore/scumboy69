@@ -20,7 +20,8 @@
 export default {
   head () {
     return {
-      title: "Home"
+      title: "Home",
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
     }
   }
 }

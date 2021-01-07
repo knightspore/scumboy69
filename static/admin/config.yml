@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+
+  # Page Content
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'content/pages'
+    format: 'frontmatter'
+    create: true
+    slug: '{{title}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  # Products
+  - name: 'products'
+    label: 'Products'
+    folder: 'content/products'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Price', name: 'price', widget: 'number' }
+      - { label: 'Image', name: 'image', widget: 'image' }
+
+  # Data
+  - name: 'data'
+    label: 'data'
+    folder: 'content/data'
+    extension: 'json'
+    format: 'json'
+    create: true
+    editor:
+      preview: false
+
