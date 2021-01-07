@@ -26,6 +26,9 @@ module.exports = {
         'orangered': '#E74723',
         'maroon': '#601A1A',
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      }
     },
   },
   variants: {},

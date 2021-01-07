@@ -7,6 +7,7 @@
         <!-- About Scumboy -->
         <div>
           <HeadingH1>{{pageContent.title}}</HeadingH1>
+          <nuxt-image class="m-8" :src="'/img/icons/hand.png'" />
           <NuxtContent :document="pageContent" />
           <SocialLinks />
         </div>
@@ -17,6 +18,7 @@
           <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
             <PressCard v-for="item in data" :pressItem="item" :key="item.id"/>
           </div>
+          <nuxt-image class="m-12" :src="'/img/icons/necklace.png'" />
         </section>
       </div>
     </SectionPadded>
