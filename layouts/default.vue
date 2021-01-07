@@ -5,9 +5,9 @@
       <div id="inner" class="m-auto">
 
         <!-- Title -->
-        <div class="pt-10 pb-8">
-          <XyzTransition appear xyz="fade up duration-6">
-            <ScumboyLogo id="logo" class="w-full lg:w-1/2 p-4 mx-auto stroke-current hover:stroke-0 transition-color duration-300" />
+        <div class="pt-6 pb-4">
+          <XyzTransition appear xyz="fade duration-6">
+            <nuxt-image :src="`/img/text/scumboy_gold.png`" class="w-3/5 mx-auto" alt="Scumboy Logo" />
           </XyzTransition>
         </div>
 
@@ -41,27 +41,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#logo path {
-  animation: animate 5s infinite ease-in;
-}
-
-@keyframes animate {
-  0% {
-    stroke-width: 3;
-    stroke-opacity: 1;
-    fill: rgba(0,0,0,0);
-  }
-  50% {
-    stroke-width: 0;
-    stroke-opacity: 0;
-    fill: currentColor;
-  }
-  100% {
-    stroke-width: 3;
-    stroke-opacity: 1;
-    fill: rgba(0,0,0,0);
-  }
-}
-</style>

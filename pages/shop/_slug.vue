@@ -1,5 +1,6 @@
 <template>
   <div class="grid lg:grid-cols-2">
+
     <!-- Image -->
     <Section>
         <NuxtImage :placeholder="true" :src="productImage" />
