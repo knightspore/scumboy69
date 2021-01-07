@@ -6,22 +6,17 @@
     <span>R{{item.price}}</span>
     </div>
     <button @click="removeFromCart()" class="flex">
-      <CrossIcon class="m-auto p-px bg-white text-lightblue rounded-full"/>
+      <div v-html="require('~/assets/svg/x.svg?include')" class="m-auto  bg-white text-lightblue rounded-full"/>
     </button>
   </div>
 </template>
 
 <script>
-import CrossIcon from '~/assets/svg/x.svg?inline'
-
 export default {
   methods: {
     removeFromCart: function () {
       this.$store.commit('items/remove', this.product)
     }
-  },
-  components: {
-    CrossIcon,
   },
   props: [
     'index',

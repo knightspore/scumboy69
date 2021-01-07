@@ -37,7 +37,8 @@ export default {
   ],
 
   optimizedImages: {
-    optimizeImages: true
+    optimizeImages: true,
+    handleImages: ['jpeg', 'png', 'svg', 'webp']
   },
 
   modules: [
