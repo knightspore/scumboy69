@@ -1,21 +1,22 @@
 <template>
-<div>
+<div @click="changeLogoColor">
   <XyzTransition appear xyz="fade duration-6">
-    <nuxt-image :src="logoColor" class="w-3/5 mx-auto" alt="Scumboy Logo" />
+    <img v-if="highlight" src="~/assets/img/text/scumboy_black.png" class="w-3/5 mx-auto" alt="Scumboy Logo Black" />
+    <img v-if="!highlight" src="~/assets/img/text/scumboy_gold.png" class="w-3/5 mx-auto" alt="Scumboy Logo Gold" />
   </XyzTransition>
 </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    logoColor () {
-      return `/img/text/scumboy_${this.color}.png`
-    }
-  },
   data () {
     return {
-      color: 'gold'
+      highlight: false,
+    }
+  },
+  methods: {
+    changeLogoColor () {
+      this.highlight = !this.hightlight
     }
   }
 

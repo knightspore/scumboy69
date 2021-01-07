@@ -2,9 +2,9 @@
   <div class="grid lg:grid-cols-2">
 
     <!-- Image -->
-    <Section>
-        <NuxtImage :placeholder="true" :src="productImage" />
-    </Section>
+    <SectionPadded>
+        <img :src="require(`~/assets/img/products/${product.image}`)" />
+    </SectionPadded>
 
     <!-- Product Details -->
     <SectionPadded>
@@ -28,11 +28,6 @@ export default {
   async asyncData ({ $content, params }) {
     const product = await $content('products', params.slug).fetch()
     return { product }
-  },
-  computed: {
-    productImage() {
-      return `/img/${this.product.image}`
-    }
   },
   methods: {
     // Add to Cart, Show Confirmation Briefly

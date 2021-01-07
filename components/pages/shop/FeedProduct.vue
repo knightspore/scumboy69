@@ -4,7 +4,7 @@
       <article class="grid gap-4 bg-lightblue text-white hover:bg-lightpink hover:text-lightblue transform translate-y-0 hover:-translate-y-1 transition-all duration-75 ease-in-out" v-if="product">
 
         <!-- Image -->
-        <nuxt-image :placeholder="true" :src="productImage" :alt="product.title" class="w-full" />
+        <img :src="require(`~/assets/img/products/${product.image}`)" :alt="product.title" class="w-full" />
 
         <!-- Details -->
         <div class="p-5 flex justify-between">
@@ -30,10 +30,5 @@ export default {
   props: [
     'product'
   ],
-  computed: {
-    productImage() {
-      return `/img/${this.product.image}`
-    }
-  },
 }
 </script>

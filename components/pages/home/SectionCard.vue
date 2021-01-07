@@ -10,7 +10,10 @@
     <!-- Image -->
     <div class="col-span-2">
       <nuxt-link v-if="link" :to="`/${link}`">
-        <img class="opacity-100 hover:opacity-75 transition-all duration-75" :src="`/gif/${gif}.gif`" :alt="text + ' cover image.'" />
+        <img v-if="asset" class="opacity-100 hover:opacity-75 transition-all duration-75"
+          :src="require(`~/assets/${asset}`)"
+          :alt="text + ' cover image.'"
+        />
       </nuxt-link>
     </div>
 
@@ -22,7 +25,7 @@
 export default {
   props: [
     'text',
-    'gif',
+    'asset',
     'link',
   ]
 }

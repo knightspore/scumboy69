@@ -5,7 +5,7 @@
       <div id="inner" class="m-auto">
 
         <!-- Title -->
-        <div class="pt-6 pb-4">
+        <div class="pt-8 lg:pt-6">
           <Logo />
         </div>
 
