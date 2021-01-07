@@ -40,11 +40,14 @@ collections:
 
   # Data
   - name: 'data'
-    label: 'data'
-    folder: 'content/data'
-    extension: 'json'
-    format: 'json'
-    create: true
-    editor:
-      preview: false
+    label: 'Data'
+    files:
+      - label: 'Press Item'
+        name: 'press'
+        file: 'content/data/press'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Blog Name', name: 'blogName', widget: 'string' }
+          - { label: 'Link', name: 'link', widget: 'string' }
+          - { label: 'Year', name: 'year', widget: 'datetime' }
 
