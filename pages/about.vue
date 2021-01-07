@@ -12,7 +12,7 @@
 
         <!-- Gold Hand Img -->
         <SectionPadded>
-          <img class="transform rotate-25 hover:rotate-12 scale-1 hover:scale-75 transition-transform duration-300 ease-in-out" src="~/assets/img/icons/hand.png" />
+          <img class="transform rotate-25 hover:rotate-12 scale-1 hover:scale-75 transition-transform duration-300 ease-in-out" src="~/assets/img/icons/hand.png?webp" />
         </SectionPadded>
 
         <divider/>

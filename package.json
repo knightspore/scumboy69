@@ -13,14 +13,19 @@
     "@nuxt/content": "^1.9.0",
     "@nuxtjs/axios": "^5.12.2",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6",
-    "imagemin-gifsicle": "7.0.0"
+    "imagemin-gifsicle": "^7.0.0",
+    "nuxt": "^2.14.6"
   },
   "devDependencies": {
     "@aceforth/nuxt-optimized-images": "^1.4.0",
     "@nuxtjs/tailwindcss": "^3.1.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.1",
-    "imagemin-svgo": "^8.0.0"
+    "imagemin-svgo": "^8.0.0",
+    "lqip-loader": "^2.2.1",
+    "responsive-loader": "^2.3.0",
+    "sharp": "^0.27.0",
+    "sqip-loader": "^1.0.0",
+    "webp-loader": "^0.6.0"
   }
 }

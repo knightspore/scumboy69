@@ -38,6 +38,10 @@ export default {
 
   optimizedImages: {
     optimizeImages: true,
+    optimizeImagesInDev: true,
+      mozjpeg: {
+        quality: 80
+      },
   },
 
   modules: [

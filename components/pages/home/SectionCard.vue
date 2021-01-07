@@ -11,7 +11,7 @@
     <div class="col-span-2">
       <nuxt-link v-if="link" :to="`/${link}`">
         <img v-if="asset" class="opacity-100 hover:opacity-75 transition-all duration-75"
-          :src="require(`~/assets/${asset}`)"
+          :src="require(`~/assets/${asset}?webp`)"
           :alt="text + ' cover image.'"
         />
       </nuxt-link>

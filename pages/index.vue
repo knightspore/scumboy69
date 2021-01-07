@@ -12,6 +12,11 @@
         </Section>
       </SectionPadded>
 
+      <!-- Social Links -->
+      <SectionPadded>
+        <SocialLinks />
+      </SectionPadded>
+
   </div>
 </template>
 
