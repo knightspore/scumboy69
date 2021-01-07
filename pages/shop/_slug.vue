@@ -3,7 +3,7 @@
 
     <!-- Image -->
     <SectionPadded>
-        <img :src="require(`~/assets/img/products/${product.image}`)" />
+        <img :src="require(`~/assets/img/products/${product.image}?webp`)" />
     </SectionPadded>
 
     <!-- Product Details -->
