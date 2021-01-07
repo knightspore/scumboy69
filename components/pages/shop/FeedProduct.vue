@@ -1,26 +1,27 @@
 <template>
   <div>
-    <article class="p-5 grid gap-4 bg-lightblue text-white" v-if="product">
+    <NuxtLink :to="`/shop/${product.slug}`">
+      <article class="grid gap-4 bg-lightblue text-white hover:bg-lightpink hover:text-lightblue transform translate-y-0 hover:-translate-y-1 transition-all duration-75 ease-in-out" v-if="product">
 
-      <!-- Product Image -->
-      <NuxtLink :to="`/shop/${product.slug}`">
+        <!-- Image -->
         <nuxt-image :placeholder="true" :src="productImage" :alt="product.title" class="w-full" />
-      </NuxtLink>
 
-      <div class="flex justify-between">
-        <!-- Name & Date -->
-        <div>
-          <h2 class="font-black uppercase text-lg" v-html="product.title" />
-          <p v-html="product.date" />
+        <!-- Details -->
+        <div class="p-5 flex justify-between">
+          <!-- Name & Date -->
+          <div>
+            <h2 class="font-black uppercase text-lg" v-html="product.title" />
+            <p v-html="product.date" />
+          </div>
+
+          <!-- Price + Purchase -->
+          <div class="h-full flex">
+            <p class="m-auto text-2xl font-semibold">R{{product.price}}</p>
+          </div>
         </div>
 
-        <!-- Price + Purchase -->
-        <div>
-          <p class="text-xl font-semibold">R{{product.price}}</p>
-        </div>
-      </div>
-
-    </article>
+      </article>
+    </NuxtLink>
   </div>
 </template>
 

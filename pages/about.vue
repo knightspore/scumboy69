@@ -1,28 +1,31 @@
 <template>
   <div>
-
-    <SectionPadded>
-      <div class="grid gap-6 grid-cols-1 lg:grid-cols-2">
+      <Section class="grid gap-6 grid-cols-1 lg:grid-cols-2">
 
         <!-- About Scumboy -->
-        <div>
+        <SectionPadded>
           <HeadingH1>{{pageContent.title}}</HeadingH1>
-          <nuxt-image class="m-8" :src="'/img/icons/hand.png'" />
           <NuxtContent :document="pageContent" />
           <SocialLinks />
-        </div>
+        </SectionPadded>
+
+
+        <!-- Gold Hand Img -->
+        <SectionPadded>
+          <nuxt-image class="transform rotate-25 hover:rotate-12 scale-1 hover:scale-75 transition-transform duration-150 ease-in-out" :src="'/img/icons/hand.png'" />
+        </SectionPadded>
+
+        <divider/>
 
         <!-- Press -->
-        <section>
+        <SectionPadded>
           <HeadingH2>{{pageContent.subtitle}}</HeadingH2>
           <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
             <PressCard v-for="item in data" :pressItem="item" :key="item.id"/>
           </div>
-          <nuxt-image class="m-12" :src="'/img/icons/necklace.png'" />
-        </section>
-      </div>
-    </SectionPadded>
+        </SectionPadded>
 
+      </Section>
   </div>
 </template>
 
@@ -36,6 +39,11 @@ export default {
   computed: {
     pressItems: function () {
       return data.filter
+    }
+  },
+  head () {
+    return {
+      title: 'About Scummy, Press and Media'
     }
   }
 }

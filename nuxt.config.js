@@ -21,7 +21,11 @@ export default {
     '~/plugins/animxyz.js'
   ],
 
-  loading: true,
+  loading: {
+    color: 'rgb(43, 158, 179)',
+    height: '.6rem',
+    continuous: true,
+  },
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,

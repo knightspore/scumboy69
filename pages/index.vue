@@ -1,16 +1,20 @@
 <template>
   <div>
 
-      <!-- Hero -->
-      <SectionPadded class="h-48 bg-fixed flex bg-cover bg-bottom" style="background-image: url('/img/gallery/nikehead.png')">
-        <HeadingH1 class="m-auto text-6xl">Welcome to the World of Scum</HeadingH1>
+
+      <!-- Hero & Sections -->
+      <SectionPadded class="text-center" >
+        <HeadingH1 class="text-6xl">Welcome to the World of Scum</HeadingH1>
+        <Section class="mb-8 grid gap-4 md:gap-8">
+          <SectionCard text="Portfolio, Projects &amp; Client Work" gif="forest" link="gallery"/>
+          <SectionCardAlt text="Online Art Shop - Prints &amp; Clothing" gif="clothing" link="shop" />
+          <SectionCard text="Who is Scumboy?" gif="texturepeople" link="about"/>
+        </Section>
       </SectionPadded>
 
-      <!-- Section Cards -->
-      <SectionPadded class="grid gap-4 md:gap-8">
-        <SectionCard text="Portfolio, Projects &amp; Client Work" gif="forest" link="gallery"/>
-        <SectionCardAlt text="Online Art Shop - Prints &amp; Clothing" gif="clothing" link="shop" />
-        <SectionCard text="Who is Scumboy?" gif="texturepeople" link="about"/>
+      <!-- Portfolio Section -->
+      <SectionPadded>
+        <HeadingH2>Portfolio and Project Gallery</HeadingH2>
       </SectionPadded>
 
   </div>

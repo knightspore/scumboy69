@@ -6,13 +6,13 @@
 
         <!-- Title -->
         <div class="pt-6 pb-4">
-          <XyzTransition appear xyz="fade duration-6">
-            <nuxt-image :src="`/img/text/scumboy_gold.png`" class="w-3/5 mx-auto" alt="Scumboy Logo" />
-          </XyzTransition>
+          <Logo />
         </div>
 
         <!-- Navigation -->
+        <div>
           <Navigation />
+        </div>
 
       </div>
     </header>
