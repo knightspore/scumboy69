@@ -1,32 +1,22 @@
 <template>
-  <div>
+  <div class="mx-4 md:mx-16 lg:mx-24">
 
-      <!-- Hero & Sections -->
-      <SectionPadded class="text-center" >
-        <HeadingH1 class="text-6xl">Welcome to the World of Scum</HeadingH1>
-        <Section class="mb-8 grid gap-4 md:gap-8 lg:grid-cols-2">
-          <SectionCard text="Portfolio, Projects &amp; Client Work" asset="gif/forest.gif" link="gallery"/>
-          <SectionCardAlt text="Online Art Shop - Prints &amp; Clothing" asset="gif/clothing.gif" link="shop" />
-          <SectionCard text="Who is Scumboy?" asset="gif/texturepeople.gif" link="about"/>
-          <SectionCardAlt text="Business Enquiries" asset="gif/eye.gif" link="contact" />
-        </Section>
-      </SectionPadded>
+    <!-- Shop, Products Section -->
+    <ShopSection />
 
-      <!-- Social Links -->
-      <SectionPadded>
-        <SocialLinks />
-      </SectionPadded>
+    <!-- TODO: Turn into Loading Spinner -->
+    <SectionPadded>
+      <img class="transform rotate-25 hover:rotate-12 scale-1 hover:scale-75 transition-transform duration-300 ease-in-out" src="~/assets/img/icons/hand.png?webp" />
+    </SectionPadded>
+
+    <!-- CTA, Press, Etc. -->
+    <AboutSection />
+
+    <!-- Social Links -->
+    <SocialLinks />
 
   </div>
 </template>
 
 <script>
-export default {
-  head () {
-    return {
-      title: "Home",
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-    }
-  }
-}
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen antialiased text-lightblue bg-white">
+  <div class="relative min-h-screen antialiased text-orangered bg-white">
 
     <!-- Header -->
     <header class="w-full">

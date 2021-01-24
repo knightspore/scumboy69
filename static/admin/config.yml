@@ -39,12 +39,12 @@ collections:
       - { label: 'Image', name: 'image', widget: 'image' }
 
   # Data
-  - name: 'data'
-    label: 'Data'
+  - name: 'press'
+    label: 'Press'
     files:
       - label: 'Press Item'
         name: 'press'
-        file: 'content/data/press'
+        file: 'content/press/press'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Blog Name', name: 'blogName', widget: 'string' }

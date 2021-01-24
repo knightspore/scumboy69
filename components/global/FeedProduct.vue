@@ -1,7 +1,7 @@
 <template>
   <div>
     <NuxtLink :to="`/shop/${product.slug}`">
-      <article class="grid gap-4 bg-lightblue text-white hover:bg-lightpink hover:text-lightblue transform translate-y-0 hover:-translate-y-1 transition-all duration-75 ease-in-out" v-if="product">
+      <article class="grid gap-4 bg-orangered text-white hover:bg-lightpink hover:text-orangered transform translate-y-0 hover:-translate-y-1 transition-all duration-75 ease-in-out" v-if="product">
 
         <!-- Image -->
         <img :src="require(`~/assets/img/products/${product.image}?webp`)" :alt="product.title" class="w-full" />
