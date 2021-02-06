@@ -10,7 +10,7 @@
     <!-- Product List -->
     <SectionPadded>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <FeedProduct v-for="product in products" :key="product.slug" :product="product" />
+        <slot/>
       </div>
     </SectionPadded>
 
@@ -19,23 +19,8 @@
 
 <script>
 export default {
-  async asyncData({$content}) {
-    const products = await $content('products').fetch()
-
-    return { products }
-  },
-  head () {
-    return {
-      title: 'Art Shop',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: ''
-        }
-      ],
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }],
-    }
-  }
+  props: [
+    'shopText'
+  ]
 }
 </script>

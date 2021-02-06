@@ -38,14 +38,19 @@ export default {
 
   optimizedImages: {
     optimizeImages: true,
-    optimizeImagesInDev: true,
-      mozjpeg: {
-        quality: 80
-      },
+    mozjpeg: {
+      quality: 80
+    },
   },
 
   modules: [
     '@nuxt/content',
+    'nuxt-shopify',
   ],
+
+  shopify: {
+    domain: 'moon-and-son-clothing.myshopify.com',
+    storefrontAccessToken: 'f259745f660f94052834a6c8c6afa1c8',
+  }
 }
 
