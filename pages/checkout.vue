@@ -47,18 +47,13 @@
 export default {
   layout: 'splash',
   computed: {
-    createCheckout() {
-      this.$store.commit('checkout/createCheckout')
-      this.finalizeCheckout
-    },
-    createCheckout() {
-      this.$store.commit('checkout/finalizeCheckout')
+    loadCheckout() {
       this.userCheckout = this.$store.state.checkout.checkout
       this.loading = false;
     },
   },
   mounted () {
-    this.createCheckout
+    this.loadCheckout
   },
   data () {
     return {

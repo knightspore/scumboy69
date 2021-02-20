@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-4 md:mx-16 lg:mx-24">
+  <div class="mx-2 md:mx-16 lg:mx-24">
 
     <!-- Shop, Products Section -->
     <ShopSection :shopText="shopText">

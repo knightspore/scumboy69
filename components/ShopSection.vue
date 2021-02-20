@@ -11,11 +11,11 @@
     </SectionPadded>
 
     <!-- Product List -->
-    <SectionPadded>
+    <Section>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
         <slot name="products"/>
       </div>
-    </SectionPadded>
+    </Section>
 
   </div>
 </template>

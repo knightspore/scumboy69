@@ -15,7 +15,7 @@
           </div>
 
           <!-- Checkout -->
-          <div v-if="cart" class="p-4 text-center">
+          <div v-if="cart" class="p-4 text-center" @click="toCheckout">
             <nuxt-link to="/checkout">
               <ButtonPrimary text="Buy this Art"/>
             </nuxt-link>
@@ -32,7 +32,17 @@
 
 <script>
 export default {
+  computed: {
+    createCheckout() {
+      this.$store.commit('checkout/createCheckout')
+      // TODO: get these working properly
+      // this.$store.commit('checkout/finalizeCheckout')
+    },
+  },
   methods: {
+    toCheckout() {
+      this.createCheckout
+    },
     clearCart() {
       this.$store.commit('checkout/reset')
       this.cart = ''

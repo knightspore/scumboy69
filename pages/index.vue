@@ -1,8 +1,8 @@
 <template>
   <div class="w-screen h-screen flex items-center justify-center">
 
-    <div class="m-auto text-center text-transparent bg-clip-text bg-gradient-to-br from-orangered to-white">
-      <h2 class="text-6xl"><nuxt-link to="/shop">[SHOP]</nuxt-link></h2>
+    <div class="m-auto text-center text-orangered">
+      <h2 class="text-6xl" style="text-shadow: 4px 4px 0px #ffffff"><nuxt-link to="/shop">[SHOP]</nuxt-link></h2>
     </div>
 
   </div>
@@ -10,6 +10,11 @@
 
 <script>
 export default {
-  layout: 'splash'
+  layout: 'splash',
+  head () {
+    return {
+      title: 'WELCOME'
+    }
+  }
 }
 </script>
