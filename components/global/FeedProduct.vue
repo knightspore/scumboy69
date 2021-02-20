@@ -7,16 +7,15 @@
         <img :src="product.images[0].src + '?webp'" :alt="product.title" class="w-full" />
 
         <!-- Details -->
-        <div class="p-5 flex justify-between">
+        <div class="p-5 flex items-center justify-between">
           <!-- Name & Date -->
           <div>
             <h2 class="font-black uppercase text-lg" v-html="product.title" />
-            <p v-html="product.description" />
           </div>
 
           <!-- Price + Purchase -->
           <div class="h-full flex">
-            <p class="m-auto text-2xl font-semibold">R{{product.variants[0].price}}</p>
+            <p class="m-auto font-semibold">{{product.productType}}</p>
           </div>
         </div>
 

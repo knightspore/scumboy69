@@ -8,7 +8,7 @@
         </div>
         <nav>
           <ul class="flex gap-4 items-center justify-center font-bold">
-            <li><nuxt-link to="/">SHOP</nuxt-link></li>
+            <li><nuxt-link to="/shop">SHOP</nuxt-link></li>
             <Cart />
           </ul>
         </nav>

@@ -1,11 +1,6 @@
 <template>
 <div>
 
-  <!-- CTA -->
-  <SectionPadded class="text-center" >
-      <SectionCard text="Business Enquiries" asset="gif/forest.gif" link="contact" />
-  </SectionPadded>
-
   <!-- Press -->
   <SectionPadded>
     <h2>Scum in the Press</h2>
