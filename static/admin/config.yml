@@ -18,25 +18,11 @@ collections:
       preview: false
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-
-  # Products
-  - name: 'products'
-    label: 'Products'
-    folder: 'content/products'
-    format: 'frontmatter'
-    create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Slug', name: 'slug', widget: 'string' }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Date', name: 'date', widget: 'datetime' }
-      - { label: 'Price', name: 'price', widget: 'number' }
-      - { label: 'Image', name: 'image', widget: 'image' }
+      - { label: 'Shop Description', name: 'body', widget: 'markdown' }
+      - { label: 'Banner Title', name: 'bannerTitle', widget: 'string' }
+      - { label: 'Banner Subtitle', name: 'bannerSubtitle', widget: 'string' }
+      - { label: 'Banner Button Text', name: 'bannerButtonText', widget: 'string' }
+      - { label: 'Banner Product Slug', name: 'bannerLink', widget: 'string' }
 
   # Data
   - name: 'press'
