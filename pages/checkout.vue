@@ -27,9 +27,11 @@
       <div class="mt-6 text-center">
           <div>
             <p class="text-xl font-bold uppercase">TOTAL: R{{userCheckout.totalPrice}}</p>
-            <a class="mt-4 inline-block" target="_blank" :href="userCheckout.webUrl">
-              <ButtonPrimary text="Go to Checkout"/>
-            </a>
+            <div @click="reset">
+              <a class="mt-4 inline-block" target="_blank" :href="userCheckout.webUrl">
+                <ButtonPrimary text="Go to Checkout"/>
+              </a>
+            </div>
           </div>
       </div>
 
@@ -51,6 +53,14 @@ export default {
       this.userCheckout = this.$store.state.checkout.checkout
       this.loading = false;
     },
+    clearCheckout() {
+      this.$store.commit('checkout/reset');
+    }
+  },
+  methods: {
+    reset() {
+      this.clearCheckout
+    }
   },
   mounted () {
     this.loadCheckout

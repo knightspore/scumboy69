@@ -12,7 +12,6 @@
           </div>
           <div>
             <p class="m-auto font-semibold">R{{product.variants[0].price}}</p>
-            <p class="m-auto font-bold text-sm">{{product.productType}}</p>
           </div>
         </div>
 

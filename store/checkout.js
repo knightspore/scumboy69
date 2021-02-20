@@ -31,14 +31,6 @@ export const mutations = {
           state.checkout = checkout;
         });
     });
-
-  },
-  finalizeCheckout(state) {
-    this.$shopify.checkout
-      .addLineItems(state.checkout.id, state.cart)
-      .then(checkout => {
-        state.checkout = checkout;
-      });
   },
   reset(state) {
     state.checkout = "";

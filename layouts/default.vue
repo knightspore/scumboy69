@@ -18,7 +18,7 @@
     </header>
 
     <!-- Page -->
-    <main class="px-4 pt-10 pb-24">
+    <main class="pt-10 pb-24">
           <XyzTransition xyz="fade down ease-in-out">
           <Nuxt />
           </XyzTransition>

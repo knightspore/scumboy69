@@ -15,9 +15,9 @@
           </div>
 
           <!-- Checkout -->
-          <div v-if="cart" class="p-4 text-center" @click="toCheckout">
+          <div v-if="cart" class="p-4 text-center">
             <nuxt-link to="/checkout">
-              <ButtonPrimary text="Buy this Art"/>
+              <ButtonPrimary text="Checkout"/>
             </nuxt-link>
           </div>
 
@@ -36,16 +36,12 @@ export default {
     createCheckout() {
       this.$store.commit('checkout/createCheckout')
       // TODO: get these working properly
-      // this.$store.commit('checkout/finalizeCheckout')
     },
   },
   methods: {
-    toCheckout() {
-      this.createCheckout
-    },
     clearCart() {
       this.$store.commit('checkout/reset')
-      this.cart = ''
+      this.cart = null
     },
     getCart() {
       this.loading = true
@@ -57,10 +53,11 @@ export default {
   },
   mounted () {
     this.cart = this.$store.state.checkout.cartRef
+    this.createCheckout
   },
   data () {
     return {
-      cart: '',
+      cart: null,
       loading: true,
     }
   },
