@@ -4,7 +4,6 @@ module.exports = {
     purgeLayersByDefault: true,
   },
     purge: {
-        enabled: process.env.NODE_ENV === 'production',
         content: [
             'components/**/*.vue',
             'layouts/**/*.vue',
@@ -12,7 +11,6 @@ module.exports = {
             'plugins/**/*.js',
             'nuxt.config.js',
             'assets/**/*.svg',
-            'node_modules/vue-slick-carousel/dist/**/*.css'
         ]
     },
   theme: {
