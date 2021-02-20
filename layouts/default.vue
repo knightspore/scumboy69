@@ -6,9 +6,6 @@
         <div class="max-w-2xl m-auto pt-4 lg:pt-2">
           <Logo />
         </div>
-        <div>
-          <SocialLinks />
-        </div>
         <nav class="mt-6 p-1">
           <ul class="flex gap-4 items-center justify-center font-bold">
             <li><nuxt-link to="/shop">SHOP</nuxt-link></li>
@@ -24,6 +21,11 @@
           </XyzTransition>
     </main>
 
+
+    <footer class="pt-4 pb-12">
+      <SocialLinks />
+    </footer>
+
   </div>
 </template>
 
@@ -31,7 +33,7 @@
 
 @layer base {
   h1 {
-    @apply mb-2 uppercase font-extrabold text-3xl;
+    @apply uppercase font-extrabold text-3xl;
   }
 
   h2 {

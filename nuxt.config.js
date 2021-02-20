@@ -47,7 +47,15 @@ export default {
   modules: [
     '@nuxt/content',
     'nuxt-shopify',
+    '@nuxtjs/sitemap',
   ],
+
+  sitemap: {
+    hostname: 'https://scumboy.co.za',
+    exclude: [
+      'admin/**'
+    ],
+  },
 
   shopify: {
     domain: 'shop-scum-boy.myshopify.com',

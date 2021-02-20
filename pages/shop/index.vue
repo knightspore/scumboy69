@@ -2,7 +2,7 @@
   <div>
 
     <!-- Banner -->
-    <div>
+    <div v-if="shopText.bannerTitle">
       <ShopBanner>
         <h1 v-html="shopText.bannerTitle" />
         <h2 v-html="shopText.bannerSubtitle" />
@@ -14,7 +14,7 @@
       </ShopBanner>
     </div>
 
-    <div class="mx-2 md:mx-16 lg:mx-24">
+    <div class="p-2 mx-2 md:mx-16 lg:mx-24">
 
       <!-- Shop, Products Section -->
       <div class="my-12">
