@@ -12,6 +12,7 @@ module.exports = {
             'plugins/**/*.js',
             'nuxt.config.js',
             'assets/**/*.svg',
+            'node_modules/vue-slick-carousel/dist/**/*.css'
         ]
     },
   theme: {
@@ -32,5 +33,7 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }

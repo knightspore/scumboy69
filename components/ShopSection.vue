@@ -3,8 +3,10 @@
 
     <!-- Store Info -->
     <SectionPadded>
-      <HeadingH1>Art Shop</HeadingH1>
-      <NuxtContent :document="shopText" />
+      <div class="pb-12">
+        <h1 class="font-bold text-2xl uppercase">{{shopText.title}}</h1>
+        <NuxtContent :document="shopText" />
+      </div>
     </SectionPadded>
 
     <!-- Product List -->

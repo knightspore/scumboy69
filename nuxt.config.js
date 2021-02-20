@@ -18,11 +18,12 @@ export default {
   },
 
   plugins: [
-    '~/plugins/animxyz.js'
+    '~/plugins/animxyz.js',
+    { src: '~/plugins/vuex-persist', ssr: false },
   ],
 
   loading: {
-    color: 'rgb(43, 158, 179)',
+    color: 'rgb(231, 71, 35)',
     height: '.6rem',
     continuous: true,
   },
@@ -49,8 +50,8 @@ export default {
   ],
 
   shopify: {
-    domain: 'moon-and-son-clothing.myshopify.com',
-    storefrontAccessToken: 'f259745f660f94052834a6c8c6afa1c8',
+    domain: 'shop-scum-boy.myshopify.com',
+    storefrontAccessToken: 'a0089bb74646a585bb231a5601d600b9',
   }
 }
 

@@ -13,7 +13,7 @@
     <div class="p-8 flex col-span-1">
       <div class="m-auto">
 
-      <HeadingH2>{{ text }}</HeadingH2>
+      <h2>{{ text }}</h2>
       <p>oliver@scumboy.co.za</p>
       </div>
     </div>
