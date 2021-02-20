@@ -3,16 +3,16 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-    purge: {
-        content: [
-            'components/**/*.vue',
-            'layouts/**/*.vue',
-            'pages/**/*.vue',
-            'plugins/**/*.js',
-            'nuxt.config.js',
-            'assets/**/*.svg',
-        ]
-    },
+    // purge: {
+    //     content: [
+    //         'components/**/*.vue',
+    //         'layouts/**/*.vue',
+    //         'pages/**/*.vue',
+    //         'plugins/**/*.js',
+    //         'nuxt.config.js',
+    //         'assets/**/*.svg',
+    //     ]
+    // },
   theme: {
     extend: {
       fontFamily: {

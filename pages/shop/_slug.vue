@@ -7,11 +7,11 @@
       <ProductImage :images="product.images" />
 
       <!-- Product Details -->
-      <SectionPadded class="lg:col-span-1">
+      <Section class="lg:col-span-1">
         <p class="my-2 text-xl lg:w-1/2" v-html="product.descriptionHtml" />
 
         <!-- Variants -->
-        <div class="mt-4 flex items-center gap-2">
+        <div class="mt-4 grid gap-2">
           <label for="variants" class="font-bold">Options </label>
           <select class="text-sm shadow-md rounded-sm" v-model="selectedProductTitle" name="variants" id="variants">
             <option disabled value="">Pick One</option>
@@ -21,17 +21,17 @@
           </select>
         </div>
 
-        <div class="mt-12 flex items-center justify-center lg:justify-start gap-4">
+        <div class="mt-12 grid">
           <div @click="addToCart">
           <ButtonPrimary  :text="`Add <i>${selectedVariant.title}</i> to Cart`" :product="product" v-if="isVariantSelected" />
           </div>
           <div>
             <XyzTransition appear xyz="fade">
-              <p v-if="added" class="mt-4 text-sm font-medium">Added to Cart</p>
+              <p v-if="added" class="p-2 mt-4 text-sm font-medium">Added to Cart</p>
             </XyzTransition>
           </div>
         </div>
-      </SectionPadded>
+      </Section>
 
 
     </div>
@@ -67,9 +67,17 @@ export default {
   },
   methods: {
     addToCart() {
-      const v = this.selectedVariant
+      const v = {
+        v: this.selectedVariant,
+        t: this.product.title,
+        s: this.product.handle,
+      }
       this.$store.commit('checkout/add', v)
       this.added = true;
+
+      setTimeout(() => {
+        this.added = false;
+      }, 5000 )
     }
   },
   async asyncData ({ $shopify, params }) {

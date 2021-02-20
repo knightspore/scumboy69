@@ -2,11 +2,14 @@
   <div class="relative min-h-screen antialiased text-orangered bg-white">
 
     <!-- Header -->
-    <header class="w-full mt-12">
+    <header class="w-full pt-8 lg:pt-12">
         <div class="max-w-2xl m-auto pt-4 lg:pt-2">
           <Logo />
         </div>
-        <nav>
+        <div>
+          <SocialLinks />
+        </div>
+        <nav class="mt-6 p-1">
           <ul class="flex gap-4 items-center justify-center font-bold">
             <li><nuxt-link to="/shop">SHOP</nuxt-link></li>
             <Cart />
