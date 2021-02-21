@@ -5,10 +5,6 @@ backend:
 media_folder: "assets/img"
 public_folder: "/img"
 
-site_url: https://scumboy.co.za
-display_url: https://scumboy.co.za
-logo_url: https://scumboy.co.za/
-
 collections:
 
   # Page Content
