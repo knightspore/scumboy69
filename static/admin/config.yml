@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "assets/img"
-public_folder: "/img"
+media_folder: "assets/img/gallery"
+public_folder: "/_nuxt/img"
 
 collections:
 
