@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div class="text-center bg-cover bg-top" :style="`background-image: url('${require('~/assets/img/gallery/nikehead.jpg?webp')};`">
+  <div class="text-center bg-cover bg-top" :style="`background-image: url('${require(`~/assets/img/gallery/${image}?resize&size=1920*format=webp`)};`">
   <div class="py-24 px-8 text-center text-white bg-gray-900 bg-opacity-50">
     <slot/>
   </div>
@@ -11,7 +11,7 @@
 <script>
 export default {
   props: [
-    'bannerImage'
+    'image'
   ]
 }
 </script>

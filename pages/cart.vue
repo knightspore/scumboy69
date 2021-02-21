@@ -31,6 +31,7 @@
           </div>
 
     </div>
+    <IconDivider icon="shoe" />
   </div>
 </template>
 
@@ -47,7 +48,6 @@ export default {
   methods: {
     clearCart() {
       this.$store.commit('checkout/reset')
-      this.cart = null
     },
   },
   mounted () {

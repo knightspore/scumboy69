@@ -3,7 +3,7 @@
 
     <!-- Banner -->
     <div v-if="shopText.bannerTitle">
-      <ShopBanner>
+      <ShopBanner :image="shopText.bannerImage">
         <h1 v-html="shopText.bannerTitle" />
         <h2 v-html="shopText.bannerSubtitle" />
         <div class="mt-6">
@@ -35,7 +35,7 @@
       <!-- CTA, Press, Etc. -->
       <AboutSection :press="press" />
 
-      <!-- Social Links -->
+      <IconDivider icon="head-min" />
 
     </div>
   </div>

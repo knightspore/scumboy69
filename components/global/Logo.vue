@@ -10,14 +10,13 @@
 export default {
   computed: {
     color() {
-      const selectedColor = this.choices[this.randomColor]
-      return selectedColor
+      var rnd = Math.floor(Math.random() * Math.floor(3))
+      return this.choices[rnd]
     }
   },
   data () {
     return {
       choices: ['gold', 'onyx', 'silver'],
-      randomColor: Math.floor(Math.random() * Math.floor(3)),
     }
   }
 }

@@ -2,8 +2,12 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: assets/img
-public_folder: /img
+media_folder: "assets/img"
+public_folder: "/img"
+
+site_url: https://scumboy.co.za
+display_url: https://scumboy.co.za
+logo_url: https://scumboy.co.za/
 
 collections:
 
@@ -23,6 +27,7 @@ collections:
       - { label: 'Banner Subtitle', name: 'bannerSubtitle', widget: 'string' }
       - { label: 'Banner Button Text', name: 'bannerButtonText', widget: 'string' }
       - { label: 'Banner Product Slug', name: 'bannerLink', widget: 'string' }
+      - { label: 'Banner Background Image', name: 'bannerImage', widget: 'string' }
 
   # Data
   - name: 'press'

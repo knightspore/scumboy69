@@ -43,6 +43,7 @@
 export default {
   layout: 'splash',
   computed: {
+    // Opens checkout in new Window & Redirect + Clear Upon Completion
     completeCheckout() {
       const url = this.$store.state.checkout.checkout.webUrl
       const w = window.open(`${url}`)
@@ -63,9 +64,6 @@ export default {
     shopifyCheckout() {
       this.completeCheckout
     },
-  },
-  mounted () {
-    this.loadCheckout
   },
   head () {
     return {
