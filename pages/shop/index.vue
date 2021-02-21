@@ -20,8 +20,8 @@
       <div class="my-12">
         <ShopSection :shopText="shopText">
             <template #products>
-              <div v-for="product in products" :key="product.id">
-              <FeedProduct :product="product" />
+              <div v-for="(product, i) in products" :key="product.id">
+              <FeedProduct :product="product" :image="images[i]" />
               </div>
             </template>
         </ShopSection>
@@ -45,10 +45,15 @@
 export default {
   async asyncData({ $content, $shopify }) {
     const products = await $shopify.product.fetchAll()
+    const images = []
+    products.forEach( async (product) => {
+      const resized = await $shopify.image.helpers.imageForSize(product.images[0], {maxWidth: 420, maxHeight: 350})
+      images.push(resized)
+    })
     const shopText = await $content('pages', 'shop').fetch()
     const press = await $content('press').fetch()
 
-    return { products, shopText, press }
+    return { products, images, shopText, press }
   },
   head () {
     return {

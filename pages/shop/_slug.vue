@@ -4,7 +4,7 @@
     <div class="grid lg:gap-8 lg:grid-cols-3">
 
       <!-- Image -->
-      <ProductImage :images="product.images" />
+      <ProductImage :images="images" :alt="product.title" />
 
       <!-- Product Details -->
       <Section class="px-6 md:px-12 lg:px-0 lg:mt-2 lg:col-span-1">
@@ -25,7 +25,7 @@
 
         <div class="mt-12 grid text-center">
           <div @click="addToCart">
-          <ButtonPrimary  :text="`Add <i>${selectedVariant.title}</i> to Cart`" :product="product" v-if="isVariantSelected" />
+          <ButtonPrimary :text="`Add <i>${selectedVariant.title}</i> to Cart`" :product="product" v-if="isVariantSelected" />
           </div>
           <div>
             <XyzTransition appear xyz="fade">
@@ -76,7 +76,13 @@ export default {
   },
   async asyncData ({ $shopify, params }) {
     const product = await $shopify.product.fetchByHandle(params.slug)
-    return { product }
+    const images = []
+    product.images.forEach( async (img) => {
+      const resized = await $shopify.image.helpers.imageForSize(img, {maxWidth: 1024, maxHeight: 1024})
+      images.push(resized)
+    })
+
+    return { product, images }
   },
   data () {
     return {

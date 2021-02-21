@@ -2,7 +2,7 @@
   <div>
     <NuxtLink :to="`/shop/${product.handle}`">
       <article class="h-64 py-12 flex items-center justify-center transform translate-y-0 hover:-translate-y-1 transition-all duration-150 ease-in-out bg-cover bg-center"
-      :style="`background-image: url('${product.images[0].src}?webp?lqip?responsive')`"
+      :style="`background-image: url('${image}')`"
       >
 
         <!-- Details -->
@@ -23,7 +23,8 @@
 <script>
 export default {
   props: [
-    'product'
+    'product',
+    'image'
   ],
 }
 </script>
