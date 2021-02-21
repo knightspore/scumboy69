@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="p-2 mx-auto md:max-w-2xl lg:max-w-4xl">
-      <h1 class="text-2xl lg:text-4xl uppercase font-bold">{{product.title}}</h1>
+      <h1 class="text-2xl lg:text-4xl uppercase font-bold text-center md:text-left">{{product.title}}</h1>
       <div class="grid lg:gap-8 lg:grid-cols-3">
 
         <!-- Image -->

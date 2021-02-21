@@ -9,7 +9,7 @@
         <nav class="mt-6 p-1">
           <ul class="flex gap-4 items-center justify-center font-bold">
             <li><nuxt-link to="/shop">SHOP</nuxt-link></li>
-            <Cart />
+            <NavCart />
           </ul>
         </nav>
     </header>
