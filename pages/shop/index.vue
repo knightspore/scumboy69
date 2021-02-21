@@ -2,16 +2,8 @@
   <div>
 
     <!-- Banner -->
-    <div v-if="shopText.bannerTitle">
-      <ShopBanner :image="shopText.bannerImage">
-        <h1 v-html="shopText.bannerTitle" />
-        <h2 v-html="shopText.bannerSubtitle" />
-        <div class="mt-6">
-          <nuxt-link :to="`/shop/${shopText.bannerLink}`">
-            <ButtonSecondary :text="shopText.bannerButtonText" />
-          </nuxt-link>
-        </div>
-      </ShopBanner>
+    <div>
+      <ShopBanner :shopText="shopText" />
     </div>
 
     <div class="p-2 mx-2 md:mx-16 lg:mx-24">
@@ -44,14 +36,14 @@
 <script>
 export default {
   async asyncData({ $content, $shopify }) {
+    const shopText = await $content('pages', 'shop').fetch()
+    const press = await $content('press').fetch()
     const products = await $shopify.product.fetchAll()
     const images = []
     products.forEach( async (product) => {
       const resized = await $shopify.image.helpers.imageForSize(product.images[0], {maxWidth: 420, maxHeight: 350})
       images.push(resized)
     })
-    const shopText = await $content('pages', 'shop').fetch()
-    const press = await $content('press').fetch()
 
     return { products, images, shopText, press }
   },

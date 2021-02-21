@@ -42,6 +42,7 @@
 <script>
 export default {
   layout: 'splash',
+  middleware: 'checkoutReady',
   computed: {
     // Opens checkout in new Window & Redirect + Clear Upon Completion
     completeCheckout() {
@@ -64,6 +65,9 @@ export default {
     shopifyCheckout() {
       this.completeCheckout
     },
+  },
+  mounted () {
+    this.$nuxt.$emit('changeBg', 'purplerunning')
   },
   head () {
     return {
