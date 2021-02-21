@@ -1,5 +1,5 @@
 <template>
-  <div class="relative min-h-screen antialiased text-orangered bg-white">
+  <div :class="`relative min-h-screen antialiased text-orangered ${darkMode ? 'bg-gray-900' : 'bg-white' }`">
 
     <!-- Header -->
     <header class="w-full pt-8 lg:pt-12">
@@ -10,6 +10,7 @@
           <ul class="flex gap-4 items-center justify-center font-bold">
             <li><nuxt-link to="/shop">SHOP</nuxt-link></li>
             <NavCart />
+            <li><ToggleDarkmode /></li>
           </ul>
         </nav>
     </header>
@@ -28,6 +29,16 @@
 
   </div>
 </template>
+
+<script>
+export default {
+  computed: {
+    darkMode() {
+      return this.$store.state.user.darkmode
+    }
+  }
+}
+</script>
 
 <style>
 

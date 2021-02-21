@@ -11,22 +11,22 @@
         <Section class="px-6 md:px-12 lg:px-0 lg:mt-2 lg:col-span-1">
 
           <!-- Title -->
-            <p class="text-xl lg:w-1/2" v-html="product.descriptionHtml" />
+          <p class="text-xl lg:w-1/2" v-html="product.descriptionHtml" />
 
           <!-- Variants -->
           <div class="mt-4 grid gap-2">
             <label for="variants" class="font-bold uppercase">Options</label>
-            <select class="text-sm font-bold shadow-md rounded-sm border-4 border-orangered" v-model="selectedProductTitle" name="variants" id="variants">
+            <select class="text-sm font-bold shadow-md rounded-sm border-4 border-orangered bg-orangered text-white active:border-white" v-model="selectedProductTitle" name="variants" id="variants">
               <option disabled value="">Pick One</option>
               <option class="font-bold" v-for="variant of product.variants" :key="variant.id" :value="variant.title">
-                {{ variant.title }} - R{{ variant.price }}
+                {{ variant.title == 'Default Title' ? product.title : variant.title }} - R{{ variant.price }}
               </option>
             </select>
           </div>
 
           <div class="mt-12 grid text-center">
             <div @click="addToCart">
-            <ButtonPrimary :text="`Add <i>${selectedVariant.title}</i> to Cart`" :product="product" v-if="isVariantSelected" />
+            <ButtonPrimary :text="`Add <i>${selectedVariant.title == 'Default Title' ? product.title : product.title + ' (' + selectedVariant.title + ')'}</i> to Cart`" :product="product" v-if="isVariantSelected" />
             </div>
             <div>
               <XyzTransition appear xyz="fade">

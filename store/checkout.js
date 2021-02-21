@@ -6,7 +6,6 @@ export const state = () => ({
 
 export const mutations = {
   add(state, variant) {
-    console.log({ state });
     state.cart.push({
       variantId: variant.v.id,
       quantity: 1
