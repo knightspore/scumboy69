@@ -1,10 +1,13 @@
 <template>
   <div class="p-2 mx-auto max-w-2xl lg:max-w-3xl">
-    <div>
+    <div v-if="products == 0" class="m-4 text-center">
+      <h1>Your Cart is Empty.</h1>
+    </div>
+    <div v-else >
           <!-- Cart -->
           <SectionPadded class="grid gap-4">
-            <h1 class="text-center">{{ cart ? 'Cart' : 'Your Cart is Empty' }}</h1>
-            <div class="p-2 font-bold bg-orangered text-white" v-for="item in cart" :key="item.id">
+            <h1 class="text-center">Cart</h1>
+            <div class="p-2 font-bold bg-orangered text-white" v-for="item in products" :key="item.id">
               <div>
               <nuxt-link class="" :to="`/shop/${item.slug}`">
                 <p class="text-xs md:text-sm lg:text-base flex items-center justify-between"><span>{{ item.title }} {{ item.variant }}</span> <span>R{{ item.price }}</span></p>
@@ -13,7 +16,7 @@
             </div>
           </SectionPadded>
 
-          <div :class="showControls">
+          <div>
             <!-- Checkout -->
             <div class="mt-4 p-4 text-center">
               <nuxt-link to="/checkout">
@@ -34,13 +37,11 @@
 <script>
 export default {
   computed: {
-    showControls() {
-      const show = this.cart == null ? 'hidden' : 'block'
-      return show
+    products() {
+      return this.$store.state.checkout.cartRef
     },
     createCheckout() {
       this.$store.commit('checkout/createCheckout')
-      // TODO: get these working properly
     },
   },
   methods: {
@@ -48,21 +49,12 @@ export default {
       this.$store.commit('checkout/reset')
       this.cart = null
     },
-    getCart() {
-      this.loading = true
-      const cartRef = this.$store.state.checkout.cartRef
-      this.cart = cartRef
-      console.log(cartRef)
-      this.loading = false
-    }
   },
   mounted () {
-    this.cart = this.$store.state.checkout.cartRef
     this.createCheckout
   },
   data () {
     return {
-      cart: null,
       loading: true,
     }
   },

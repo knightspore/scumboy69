@@ -23,10 +23,10 @@
         <div class="mt-6 text-center">
             <div>
               <p class="text-xl font-bold uppercase">{{'TOTAL: R' + checkout.totalPrice }}</p>
-              <div @click="reset">
-                <a class="mt-4 inline-block" target="_blank" :href="checkout.webUrl">
-                  <ButtonPrimary text="Go to Checkout"/>
-                </a>
+              <div @click="shopifyCheckout">
+                  <div class="mt-4 inline-block">
+                    <ButtonPrimary text="Go to Checkout"/>
+                  </div>
               </div>
             </div>
         </div>
@@ -43,16 +43,25 @@
 export default {
   layout: 'splash',
   computed: {
-    clearCheckout() {
-      this.$store.commit('checkout/reset');
+    completeCheckout() {
+      const url = this.$store.state.checkout.checkout.webUrl
+      const w = window.open(`${url}`)
+
+      const timer = setTimeout(() => {
+        if(w.closed) {
+          clearInterval(timer)
+          this.$router.push('/shop')
+          this.$store.commit('checkout/reset');
+        }
+      }, 1000)
     },
     checkout() {
       return this.$store.state.checkout.checkout
     }
   },
   methods: {
-    reset() {
-      this.clearCheckout
+    shopifyCheckout() {
+      this.completeCheckout
     },
   },
   mounted () {
