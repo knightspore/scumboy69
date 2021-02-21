@@ -24,7 +24,7 @@ export default {
 
   loading: {
     color: 'rgb(231, 71, 35)',
-    height: '.6rem',
+    height: '.2.5rem',
     continuous: true,
   },
 
