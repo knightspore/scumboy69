@@ -51,7 +51,7 @@ export default {
   ],
 
   sitemap: {
-    hostname: 'https://scumboy.co.za',
+    hostname: 'https://www.scumboy.co.za',
     exclude: [
       'admin/**'
     ],
